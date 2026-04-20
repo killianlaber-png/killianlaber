@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <img src="assets/portfolio_logo.png" width="250px">
+    <body>
+        <meta charset="utf-8">
+        <link href="gallery_pages.css" type="text/css" rel="stylesheet">
+
+        <div class="top">
+
+            <nav style="margin-left: 50px">
+                <a href="index.html"> about </a> | 
+                <a href="works.html"; style="color:#f7cc19"> works </a>
+            </nav>
+
+            <h1 class="title">Illuminant Identity</h1>
+        </div>
+
+
+        <img class="main_image" src="assets/Illuminant_Signature.png" width="480" style="margin-top: 80px">
+        <p class="stats_10">1200PX x 210PX, Visual Communication</p>
+
+        <p class="overview">The logo signature for a bookstore company called Illuminant. Includes single color and color reversal variants, as well as a business card.</p>
+        <p class="description">The ultimate goal behind this logo design was to modernize something old. I took inspiration from illunimated manuescripts for the concept of the company, so a candle as the primary logo element seemed a good fit. The premise was that it would be specifically catered to night readers, selling booklights and shiny-texted books alongside the standard inventory, further connecting the medieval inspiration to the modern application.<br><br>Created in Illustrator.</p>
+
+
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <img src="assets/id_slide_1.png" style="width: 100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="assets/id_slide_2.png" style="width: 100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="assets/id_slide_3.png" style="width: 100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="assets/business_card_front.png" style="width: 100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="assets/business_card_back.png" style="width: 100%">
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!-- The dots/circles -->
+        <div style="margin-left:820px">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}    
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+            }
+        </script>
+
+    </body>
+</html>

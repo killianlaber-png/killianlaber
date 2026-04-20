@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <img src="assets/portfolio_logo.png" width="250px">
+    <body>
+        <meta charset="utf-8">
+        <link href="gallery_pages.css" type="text/css" rel="stylesheet">
+
+        <div class="top">
+
+            <nav style="margin-left: 50px">
+                <a href="index.html"> about </a> | 
+                <a href="works.html"; style="color:#f7cc19"> works </a>
+            </nav>
+
+            <h1 class="title">Kinetic Type</h1>
+        </div>
+
+
+        <div  class="main_video"> <video width="480px" height="270" controls>
+            <source src="assets/Kinetic_Type.mp4" type="video/mp4">
+            </video></div>
+        <p class="stats_4">1920PX x 1080PX, Motion Graphics</p>
+
+        <p class="overview">A short animation project based around creating visual tone entirely through text, as well as timing visuals with audio.</p>
+        <p class="description">One of the things that made this project a little odd from the start is that this style of animation, Kinetic Type, is most commonly associated with song lyric videos, but we weren’t allowed to choose songs as our subject for the project. I ultimately settled on the speech delivered by Roy at the end of the 1982 neo-noir Blade Runner. Trying to do justice to the scene when my only visuals were words was a long process that took a great deal of planning.<br><br>Created in After Effects.</p>
+
+
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <img src="assets/PR4_Slide1.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="assets/PR4_Slide2.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="assets/PR4_Slide3.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="assets/PR4_Slide4.png" style="width:100%">
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!-- The dots/circles -->
+        <div style="margin-left:835px">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}    
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+            }
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <img src="assets/portfolio_logo.png" width="250px">
+    <body>
+        <meta charset="utf-8">
+        <link href="gallery_pages.css" type="text/css" rel="stylesheet">
+
+        <div class="top">
+
+            <nav style="margin-left: 50px">
+                <a href="index.html"> about </a> | 
+                <a href="works.html"; style="color:#f7cc19"> works </a>
+            </nav>
+
+            <h1 class="title">Whale Pictograms</h1>
+        </div>
+
+
+        <img class="main_image" src="assets/Whales_Image.png" height="540">
+        <p class="stats_5">6" x 6", Intro to Computer Graphics</p>
+
+        <p class="overview">The very first project I ever did for my Graphic Design corse was to choose an animal and create two distinct pictograms from it. They had to be readible as the animal of choice when printed both at 6 inch and 1 inch squares.</p>
+        <p class="description">It didn’t take long after this project was assigned to settle of the humpback whale as my animal of choice. They simply have a shape that I find extremely interesting, especially when viewed underwater and from the side. It was challenging, therefore, to come up with a second pose to work with, but the iconic breaching that humpbacks do was perfect for it. While not specifically created for any sort of larger project, these pictograms could easily make for strong icons in a wayfinding system or, of course, a logo.<br><br>Created in Illustrator.</p>
+
+
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <img src="assets/Whale_SBS1.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="assets/Whale_SBS2.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="assets/Whale_Mockup.png" style="width:100%">
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!-- The dots/circles -->
+        <div style="margin-left:850px">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}    
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+            }
+        </script>
+
+    </body>
+</html>

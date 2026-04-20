@@ -1,0 +1,223 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap');
+</style>
+
+html {
+    background-color: #364d60;
+}
+
+
+body {
+    font-family: "Cascadia Code", sans-serif;
+    font-size: auto;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #364d60;
+    margin: 20px;
+    margin-left: 180;
+}
+
+a, a:hover, a:visited {
+    text-decoration: none;
+    color:inherit;
+}
+
+nav {
+    font-size: 18px;
+    color: #a5b3bf
+}
+
+nav a:hover {
+    font-weight: 700
+}
+
+.intro {
+    display: flex;
+    margin-top: 45px;
+}
+
+.intro_text {
+    color: #364d60;
+    background-color: #a5b3bf;
+    margin-right: 250px;
+    width: 630px;
+    height: 540px;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+h1 {
+    color: #f7cc18;
+}
+
+.top {
+    display: flex;
+}
+
+.title {
+    margin-left: 562px;
+    margin-top: -10px;
+}
+
+.main_image {
+    margin: 20px 0px 0px 50px;
+    border: 6px solid #f7cc19;
+    padding: 1px;
+}
+
+.main_video {
+    margin: 90px 0px 0px 50px;
+    border: 6px solid #f7cc19;
+    padding: 1px;
+    max-width: 480px;
+}
+
+.carousel_image {
+    display: block;
+    margin-left: 750px;
+    margin-top: -350px;
+}
+
+.stats_1 {
+    margin-left: 78px;
+    margin-top: 5px;
+    color: #f7cc19;
+}
+
+.stats_2 {
+    margin-left: 52px;
+    margin-top: 5px;
+    color: #f7cc19;
+}
+
+.stats_3 {
+    margin-left: 135px;
+    margin-top: 5px;
+    color: #f7cc19;
+}
+
+.stats_4 {
+    margin-left: 140px;
+    margin-top: 214px;
+    color: #f7cc19;
+}
+
+.stats_5 {
+    margin-left: 44px;
+    margin-top: 10px;
+    color: #f7cc19;
+}
+
+.stats_6 {
+    margin-left: 95px;
+    margin-top: 5px;
+    color: #f7cc19;
+}
+
+.stats_7 {
+    margin-left: 130px;
+    margin-top: 260px;
+    color: #f7cc19;
+}
+
+.stats_8 {
+    margin-left: 120px;
+    margin-top: 100px;
+    color: #f7cc19;
+}
+
+.stats_9 {
+    margin-left: 150px;
+    margin-top: 15px;
+    color: #f7cc19;
+}
+
+.stats_10 {
+    margin-left: 120px;
+    margin-top: 275px;
+    color: #f7cc19;
+}
+
+.overview {
+    color: #364d60;
+    background-color: #a5b3bf;
+    margin-left: 750px;
+    margin-top: -600px;
+    width: 630px;
+    height: 120px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 15px;
+}
+
+.description {
+    color: #364d60;
+    background-color: #a5b3bf;
+    margin-left: 1050px;
+    margin-top: -40px;
+    width: 330px;
+    height: 350px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 15px;
+}
+
+
+/* Stolen Nonsense down here, hopefully I can reverse engineer this */
+
+{box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 270px;
+  position: relative;
+    margin: -320px 0px 0px 750px
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -18px;
+  padding: 5px;
+  color: #a5b3bf;
+  font-weight: bold;
+  font-size: 14px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  color: #f7cc19
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.active, .dot:hover {
+  background-color: #f7cc19;
+}
